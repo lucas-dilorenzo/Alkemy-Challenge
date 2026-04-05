@@ -1,16 +1,55 @@
-# Alkeflix 🍿
+# Alkemy Challenge 🍿
 
-Challenge de app para Alkemy. 
-El objetivo de este challenge es desarrollar una aplicación iOS utilizando una API
-que posee películas, programas de televisión y artistas: API Overview — The Movie
-Database (TMDb). Esta API es gratuita y requiere registrarse previamente ya que se
-necesitará una clave (key) para que los endpoints respondan correctamente.
+Challenge técnico iOS para [Alkemy](https://www.alkemy.org/). Aplicación de películas consumiendo la API de [The Movie Database (TMDb)](https://www.themoviedb.org/).
 
-Requerimientos
+## Funcionalidades
 
-👉 Alamofire para las peticiones.
+- Listado de películas top y por género
+- Vista de detalle de película
+- Login de usuario
+- Menú principal con navegación
 
-👉 Arquitectura MVVM.
+## Tecnologías y decisiones de diseño
 
-👉 Realización de vistas con xibs (no storyboards).
+- **Lenguaje:** Swift
+- **Arquitectura:** MVVM
+- **Networking:** Alamofire
+- **Vistas:** XIBs (sin Storyboards)
+- **Gestión de dependencias:** CocoaPods
+- **API:** [TMDb](https://developers.themoviedb.org/3)
 
+## Estructura
+
+```
+Alkeflix/
+├── Model/
+│   └── Movies Struct/
+├── Service/
+│   └── APIClient.swift
+├── View/
+│   ├── Login/
+│   ├── Main Menu/
+│   ├── List of Top Movies/
+│   ├── List of Genre Movies/
+│   └── Movie View/
+└── ViewModel/
+    └── MoviesViewModel.swift
+```
+
+## Requisitos
+
+- Xcode 13+
+- iOS 14+
+- CocoaPods
+- API Key de TMDb (gratuita — [registrarse aquí](https://www.themoviedb.org/signup))
+
+## Instalación
+
+```bash
+git clone https://github.com/lucas-dilorenzo/Alkemy-Challenge.git
+cd Alkemy-Challenge
+pod install
+open Alkeflix.xcworkspace
+```
+
+> Reemplazar la API key de TMDb en `APIClient.swift` con la propia antes de correr la app.
